@@ -1,0 +1,27 @@
+ body{background-color: #24353F!important;}
+ 
+.colorFont{
+    color: rgb(23, 162, 184) !important;
+}
+input::placeholder{
+    color: wheat !important;
+}
+button{
+    border-color:rgb(23, 162, 184) !important ;
+}
+.inner
+{
+    box-shadow: 20px 20px 20px #1B282F , -20px -20px 30px #1B282F;
+}
+
+button:hover {
+    background-color: rgb(23, 162, 184) !important ;
+    color: white !important;
+}
+.retun_logout:hover button{
+background-color: rgb(255, 193, 7) !important;
+
+}
+.retun_logout:hover button a{
+    color: white !important;
+}

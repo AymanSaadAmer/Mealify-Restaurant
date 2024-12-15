@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+</head>
+<body>
+    
+<nav class="position-relative pt-3 d-flex justify-content-between"> 
+    <div class="logo text-white ms-5 fs-4">
+        <span class="ms-5">SMART LOGIN</span>
+        
+        </div>
+        <div class=" retun_logout me-5 ">
+            <button class="me-5 p-1 border-warning  bg-transparent " ><a class="  fs-5 text-secondary text-decoration-none" href="file:///F:/Course%20Front_End/html&&Css&&Js/Day24/Login/index.html">Logout </a></button>
+        </div>
+</nav>
+<section class="">
+<div class=" inner d-flex justify-content-center align-items-center m-auto text-center colorFont  position-absolute top-50 start-50 translate-middle w-75 p-5 ">
+    
+        <h1 >Welcome</h1>
+    
+</div>
+</section>
+
+<script>
+    // جلب اسم المستخدم من localStorage
+    const loggedInUserName = localStorage.getItem("loggedInUserName");
+
+    // التحقق من وجود اسم مستخدم
+    if (loggedInUserName) {
+        // تحديث النص داخل الـ <h1>
+        const welcomeMessage = document.querySelector("h1");
+        welcomeMessage.textContent = `Welcome, ${loggedInUserName}!`;
+    } else {
+        // إذا لم يتم تسجيل الدخول، إعادة التوجيه إلى صفحة تسجيل الدخول
+        alert("Please log in first!");
+        window.location.href = "index.html"; // رابط صفحة تسجيل الدخول
+    }
+</script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src=""></script>
+</body>
+</html>
