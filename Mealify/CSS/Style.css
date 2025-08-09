@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Pacifico&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+*{
+    scroll-behavior: smooth;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+::selection {
+    background-color:#DD5959;
+    color: white;
+}
+
+/* Start Navbar CSS  */
+
+/* قاعدة جديدة لتطبيق خط تحت الروابط عند التحريك فوقها */
+.nav-link {
+    position: relative;
+    color: #000000; /* لون النص الافتراضي */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: black !important; /* لون النص عند التحريك فوقه */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* عرض الخط تحت الرابط */
+    background-color: #ce1212; /* لون الخط تحت الرابط */
+    left: 0;
+    bottom: -2px; /* موقع الخط تحت الرابط */
+    transition: width 0.3s ease; /* تأثير التحريك التدريجي */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* تمدد الخط تحت الرابط عند التحريك فوقه */
+}
+
+#navbarSupportedContent {
+    margin-left: 330px;
+}
+
+.navbar-brand::after {
+    content: ".";
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+}
+
+/* إضافة قواعد إضافية لجعل النص تحت النافبار */
+.container.mt-4 {
+    margin-top: 20px; /* تعديل المسافة بين النافبار والنص */
+}
+
+.text-center {
+    text-align: center; /* توسيط النص */
+}
+
+/* End Navbar CSS  */
+
+/* Start Home CSS  */
+.h2_header{
+    font-family: "Amatic SC", serif;
+    font-size: 65px;
+}
+
+.btn_Book{
+    background-color:#ce1212 ;
+    border: none;
+    border-radius: 0px 20px 20px 20px;
+    -webkit-border-radius: 0px 20px 20px 20px;
+    -moz-border-radius: 0px 20px 20px 20px;
+    -ms-border-radius: 0px 20px 20px 20px;
+    -o-border-radius: 0px 20px 20px 20px;
+}
+.btn_Book:hover{
+    background-color: #e61414;
+}
+.fa-play{
+    border: 8px solid;
+    border-radius: 50%;
+    border-color: #ce1212 #EEEEEE #EEEEEE  #ce1212;
+    rotate:-45deg;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.hover_vedio{
+    color: #000000;
+}
+.hover_vedio:hover{
+    color: #e61414;
+}
+
+.img_width{
+    width: 85%;
+    filter: drop-shadow(4px 4px 9px #000a);
+    -webkit-filter: drop-shadow(4px 4px 9px #000a);
+}
+.img_hero:hover{
+    animation:shake .5s infinite;
+    -webkit-animation:shake .5s infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+/* End Home CSS  */
+/* Start Chef CSS  */
+
+.title p{
+    font-size: 50px;
+    font-family:"Amatic SC", serif ;
+}
+.title span{
+    color: #e61414;
+    font-family:"Amatic SC", serif ;
+}
+
+.chef{
+    width:calc((100% / 3 ) - 24px ) ;
+    box-shadow: 0px 0px 20px #0000001b ;
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    overflow: hidden;
+}
+.icon_chef{
+    position: absolute;
+    top: 35px;
+    right: -100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.5s;
+}
+.chef:hover{
+    scale: 1.1;
+}
+.chef:hover .icon_chef{
+    right: 20px !important;
+    transition:all 0.5s 0.5s;
+
+}
+div.chef .fa-twitter:hover {
+    color: #000000 !important;
+}
+div.chef .fa-facebook:hover {
+    color: #000000 !important;
+}
+div.chef .fa-instagram:hover {
+    color: #000000 !important;
+}
+div.chef .fa-linkedin:hover {
+    color: #000000 !important;
+}
+
+.img{
+    position: relative;
+}
+.img::before{
+    content: "";
+    position:absolute;
+    background-image: url("./../image/team-shape.svg");
+    width: 100%;
+    height: 60px;
+    bottom: -1px;
+}
+
+/* End Chef CSS  */
+
+/* Start Gallery CSS  */
+.content_Gallary{
+    display: grid;
+    height: 1200px; /* أو أي قيمة تناسب المحتوى */
+    grid-template-columns: repeat(12, 1fr); /* 12 عمودًا */
+    grid-template-rows: auto; /* أو أي قيمة تناسب محتوياتك */
+    gap: 25px; /* مسافة بين العناصر */
+    grid-template-areas: 
+    "piza piza piza piza beef beef beef beef burger burger burger burger"
+    "piza piza piza piza beef beef beef beef burger burger burger burger"
+    "levitation levitation levitation levitation beef beef beef beef crispy crispy crispy crispy"
+    "levitation levitation levitation levitation beef beef beef beef crispy crispy crispy crispy"
+    "levitation levitation levitation levitation beef beef beef beef kebab kebab kebab kebab"
+    "levitation levitation levitation levitation frittata frittata frittata frittata kebab kebab kebab kebab"
+    ". . . . frittata frittata frittata frittata kebab kebab kebab kebab"
+    ". . . . frittata frittata frittata frittata . . . ."
+}
+.beef{
+    grid-area: beef;
+    
+}
+.piza{
+    grid-area: piza;
+    
+}
+.burger{
+    grid-area:burger;
+    
+}
+.levitation{
+    grid-area:levitation;
+    
+}
+.crispy{
+    grid-area:crispy;
+    
+    
+}
+.kebab{
+    grid-area:kebab;
+    
+}
+.frittata{
+    grid-area:frittata;
+    
+}
+.image_gallary{
+    position: relative;
+    overflow: hidden;
+}
+.content_layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 110%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.image_gallary:hover .content_layer{
+    top: 0;
+}
+.content_layer div p{
+    color: rgb(221, 221, 221);
+}
+/* End Gallery CSS  */
+
+/* Start Contact CSS  */
+.input_data{
+    box-shadow: 10px 10px 10px #eeeeee8c , -10px -10px 10px #eeeeee8c ;
+}
+#mesg{
+    resize: both;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#Contact input{
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+input:focus , textarea:focus {
+        border: 2px solid #ce1212 !important; /* لون البوردر */
+        outline: none !important; /* إزالة الـ outline الافتراضي */
+        box-shadow: none !important;
+    }
+    .button_send{
+        width: 200px;
+        height: 55px;
+        background-color: #ce1212;
+        border-radius:30px;
+        border: none;
+        -webkit-border-radius:30px;
+        -moz-border-radius:30px;
+        -ms-border-radius:30px;
+        -o-border-radius:30px;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+}
+.button_send:hover{
+    background-color: #e61414;
+}
+/* End Contact CSS  */
+
+/* Start Footer CSS  */
+footer{
+    background-image: url(./../image/background\ image\ footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.img_logo_footer{
+    width: 40px;
+    height: 40px;
+}
+.h2_footer::after{
+    content: ".";
+    font-size: 28px;
+    font-weight: bold;
+    color:#ce1212;
+}
+
+.box {
+    transition: transform 0.3s ease; /* لتنعيم الحركة */
+}
+
+.box:hover {
+    transform: translateX(10px); /* تحريك العنصر 10px إلى اليمين */
+    background-color: rgba(229, 217, 242,0.2);
+}
+.Btn_email{
+    background-color: #ce1212 !important;
+    transition: all 0.5s !important;
+    -webkit-transition: all 0.5s !important;
+    -moz-transition: all 0.5s !important;
+    -ms-transition: all 0.5s !important;
+    -o-transition: all 0.5s !important;
+}
+.Btn_email:hover{
+    background-color: #e61414 !important;
+}
+.icon_Touch_Footer{
+    color: #ce1212 !important;
+}
+/* End Footer CSS  */
+
+body.dark-mode {
+    background-color: #121212; /* لون خلفية أسود غامق */
+    color: #ffffff; /* نص أبيض */
+}
+
+body.dark-mode .bg-secondary-subtle {
+    background-color: #1e1e1e !important; /* تغيير الخلفية الرصاصية إلى أسود */
+}
+
+body.dark-mode .text-secondary {
+    color: #bfbfbf !important; /* نص رصاصي فاتح */
+}
+
+body.dark-mode .btn_Book,
+body.dark-mode .button_send {
+    background-color: #a57c45 !important; /* لون عسلي */
+    color: #ffffff !important;
+}
+
+body.dark-mode .btn_Book:hover,
+body.dark-mode .button_send:hover {
+    background-color: #8e6c3b !important; /* لون عسلي أغمق */
+}
+body.dark-mode #Home .btn_Book a {
+    color: black !important; /* روابط بلون عسلي */
+}
+body.dark-mode  a {
+    color: #a57c45 !important; /* روابط بلون عسلي */
+}
+body.dark-mode #Contact {
+    background-color: #121212 !important; /* خلفية سوداء */
+    color: #ffffff !important; /* نص أبيض */
+
+}
+
+/* خلفية الحقول تبقى بيضاء مع نصوص سوداء */
+body.dark-mode #Contact .form-control {
+    background-color: #ffffff !important; /* خلفية بيضاء */
+    color: #000000 !important; /* نص أسود */
+    border: 1px solid #a57c45 !important; /* إطار عسلي */
+}
+
+/* الخلفية البيضاء الحالية للبيانات المسجلة تصبح سوداء */
+body.dark-mode #Contact .content_contact .d-flex {
+    background-color: #302626b2 !important; /* خلفية سوداء */
+    color: #ffffff !important; /* نص أبيض */
+}
+
+/* التأكد من العناوين والنصوص */
+body.dark-mode #Contact .content_contact h5,
+body.dark-mode #Contact .content_contact p {
+    color: #ffffff !important; /* نصوص بيضاء */
+}

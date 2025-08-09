@@ -1,0 +1,16 @@
+@media screen and (max-width: 750px){
+    .content_Gallary{
+        display: block !important;
+        margin-bottom: 700px;
+    }
+    .contain_chefs{
+        display: block !important;
+        width: 100% !important;
+        margin-top:250px;
+
+    }
+    .chef{
+        margin-top: 60px;
+        width: calc(100% - 24px) !important;
+    }
+}
